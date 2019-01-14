@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-selected
+  labels:
+    select: me
+spec:
+  containers:
+  - name: web
+    image: nginx:alpine
+    ports:
+    - name: web
+      containerPort: 80
